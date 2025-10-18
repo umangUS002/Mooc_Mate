@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "question": "What is the time complexity of binary search?",
+    "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+    "correctIndex": 1,
+    "explanation": "Binary search divides the array in half each step, giving O(log n)."
+  },
+  {
+    "id": 2,
+    "question": "Which data structure is used for BFS?",
+    "options": ["Stack", "Queue", "Priority Queue", "Tree"],
+    "correctIndex": 1,
+    "explanation": "BFS uses a queue to explore nodes level by level."
+  }
+]
