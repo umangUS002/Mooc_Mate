@@ -1,70 +1,75 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
-export default function QuizPage({ questions, learningMode, onRestart, selectedWeeks }) {
-  const [index, setIndex] = useState(0)
-  const [selected, setSelected] = useState(null)
-  const [score, setScore] = useState(0)
-  const [showResults, setShowResults] = useState(false)
-  const [showReview, setShowReview] = useState(false)
-  const [incorrectQs, setIncorrectQs] = useState([])
-  const [timeLeft, setTimeLeft] = useState(learningMode ? null : 600)
-  const [questionSet, setQuestionSet] = useState(questions)
-  const [answeredQuestions, setAnsweredQuestions] = useState({})
-  const [viewedQuestions, setViewedQuestions] = useState(new Set([0]))
+export default function QuizPage({
+  questions,
+  learningMode,
+  onRestart,
+  selectedWeeks,
+}) {
+  const [index, setIndex] = useState(0);
+  const [selected, setSelected] = useState(null);
+  const [score, setScore] = useState(0);
+  const [showResults, setShowResults] = useState(false);
+  const [showReview, setShowReview] = useState(false);
+  const [incorrectQs, setIncorrectQs] = useState([]);
+  const [timeLeft, setTimeLeft] = useState(learningMode ? null : 600);
+  const [questionSet, setQuestionSet] = useState(questions);
+  const [answeredQuestions, setAnsweredQuestions] = useState({});
+  const [viewedQuestions, setViewedQuestions] = useState(new Set([0]));
 
-  const current = questionSet[index]
+  const current = questionSet[index];
 
   useEffect(() => {
-    setViewedQuestions((prev) => new Set([...prev, index]))
-  }, [index])
+    setViewedQuestions((prev) => new Set([...prev, index]));
+  }, [index]);
 
   // Timer countdown (only for test mode)
   useEffect(() => {
     if (!learningMode && !showResults && timeLeft > 0) {
-      const timer = setInterval(() => setTimeLeft((prev) => prev - 1), 1000)
-      return () => clearInterval(timer)
+      const timer = setInterval(() => setTimeLeft((prev) => prev - 1), 1000);
+      return () => clearInterval(timer);
     } else if (timeLeft === 0) {
-      setShowResults(true)
+      setShowResults(true);
     }
-  }, [learningMode, showResults, timeLeft])
+  }, [learningMode, showResults, timeLeft]);
 
   // Helper: record answer only once per question
   const recordAnswerOnce = (qIndex, selectedIdx) => {
     // If already answered, do nothing (prevents double counting)
-    if (answeredQuestions[qIndex] !== undefined) return
+    if (answeredQuestions[qIndex] !== undefined) return;
 
     setAnsweredQuestions((prev) => ({
       ...prev,
       [qIndex]: selectedIdx,
-    }))
+    }));
 
-    const q = questionSet[qIndex]
-    if (!q) return
+    const q = questionSet[qIndex];
+    if (!q) return;
 
     if (selectedIdx === q.correctIndex) {
-      setScore((prev) => prev + 1)
+      setScore((prev) => prev + 1);
     } else {
-      setIncorrectQs((prev) => [...prev, q])
+      setIncorrectQs((prev) => [...prev, q]);
     }
-  }
+  };
 
   const handleSelect = (i) => {
-    if (answeredQuestions[index] !== undefined) return
+    if (answeredQuestions[index] !== undefined) return;
 
-    setSelected(i)
+    setSelected(i);
 
     // In learning mode we want immediate feedback and count, but only once
     if (learningMode) {
-      recordAnswerOnce(index, i)
+      recordAnswerOnce(index, i);
     }
-  }
+  };
 
   const handleNext = () => {
     // In test mode, record the answer for scoring (only if user selected)
     if (!learningMode && selected !== null) {
-      recordAnswerOnce(index, selected)
+      recordAnswerOnce(index, selected);
     }
 
     // ensure answeredQuestions stores selection for navigation
@@ -72,17 +77,17 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
       setAnsweredQuestions((prev) => ({
         ...prev,
         [index]: selected,
-      }))
+      }));
     }
 
     if (index + 1 < questionSet.length) {
-      setIndex(index + 1)
+      setIndex(index + 1);
       // restore previous answer if exists
-      setSelected(answeredQuestions[index + 1] ?? null)
+      setSelected(answeredQuestions[index + 1] ?? null);
     } else {
-      setShowResults(true)
+      setShowResults(true);
     }
-  }
+  };
 
   const handlePrevious = () => {
     // store current selection before going back
@@ -90,86 +95,89 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
       setAnsweredQuestions((prev) => ({
         ...prev,
         [index]: selected,
-      }))
+      }));
     }
     if (index > 0) {
-      setIndex(index - 1)
-      setSelected(answeredQuestions[index - 1] ?? null)
+      setIndex(index - 1);
+      setSelected(answeredQuestions[index - 1] ?? null);
     }
-  }
+  };
 
   const handleJumpToQuestion = (questionIndex) => {
     if (selected !== null) {
       setAnsweredQuestions((prev) => ({
         ...prev,
         [index]: selected,
-      }))
+      }));
     }
-    setIndex(questionIndex)
-    setSelected(answeredQuestions[questionIndex] ?? null)
-  }
+    setIndex(questionIndex);
+    setSelected(answeredQuestions[questionIndex] ?? null);
+  };
 
   const handleSubmit = () => {
     if (selected !== null) {
-      recordAnswerOnce(index, selected)
+      recordAnswerOnce(index, selected);
       setAnsweredQuestions((prev) => ({
         ...prev,
         [index]: selected,
-      }))
+      }));
     }
     // move next (or finish if last)
     if (index + 1 < questionSet.length) {
-      setIndex(index + 1)
-      setSelected(answeredQuestions[index + 1] ?? null)
+      setIndex(index + 1);
+      setSelected(answeredQuestions[index + 1] ?? null);
     } else {
-      setShowResults(true)
+      setShowResults(true);
     }
-  }
+  };
 
   const handleFinish = () => {
     // If they finish without submitting current question, record it
     if (selected !== null) {
-      recordAnswerOnce(index, selected)
+      recordAnswerOnce(index, selected);
       setAnsweredQuestions((prev) => ({
         ...prev,
         [index]: selected,
-      }))
+      }));
     }
-    setShowResults(true)
-  }
+    setShowResults(true);
+  };
 
   const formatTime = (t) => {
-    const m = Math.floor(t / 60)
-    const s = t % 60
-    return `${m}:${s < 10 ? "0" + s : s}`
-  }
+    const m = Math.floor(t / 60);
+    const s = t % 60;
+    return `${m}:${s < 10 ? "0" + s : s}`;
+  };
 
   const handleRetryIncorrect = () => {
     if (incorrectQs.length > 0) {
-      setShowResults(false)
-      setShowReview(false)
-      setQuestionSet(incorrectQs)
-      setIndex(0)
-      setScore(0)
-      setSelected(null)
-      setIncorrectQs([])
-      setTimeLeft(learningMode ? null : 600)
-      setAnsweredQuestions({})
-      setViewedQuestions(new Set([0]))
+      setShowResults(false);
+      setShowReview(false);
+      setQuestionSet(incorrectQs);
+      setIndex(0);
+      setScore(0);
+      setSelected(null);
+      setIncorrectQs([]);
+      setTimeLeft(learningMode ? null : 600);
+      setAnsweredQuestions({});
+      setViewedQuestions(new Set([0]));
     }
-  }
+  };
 
   if (showReview) {
     return (
       <div
         style={{
-          background: "radial-gradient(circle at center, rgba(91, 28, 154, 0.37) 0%, #000000 100%)",
+          background:
+            "radial-gradient(circle at center, rgba(91, 28, 154, 0.37) 0%, #000000 100%)",
         }}
         className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6"
       >
         <div className="w-full max-w-4xl">
           <div className="backdrop-blur-lg bg-black/30 p-6 sm:p-8 rounded-2xl border border-purple-800/40 shadow-[0_0_40px_rgba(138,43,226,0.25)]">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-white text-center">Answer Review</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-white text-center">
+              Answer Review
+            </h2>
             <div className="space-y-3 sm:space-y-4 max-h-[60vh] overflow-y-auto">
               {questions.map((q, idx) => (
                 <div
@@ -184,7 +192,9 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
                       <div
                         key={i}
                         className={`ml-4 text-xs sm:text-sm ${
-                          i === q.correctIndex ? "text-green-400 font-semibold" : "text-gray-300"
+                          i === q.correctIndex
+                            ? "text-green-400 font-semibold"
+                            : "text-gray-300"
                         }`}
                       >
                         <span className="inline-block w-5 h-5 rounded-full border border-current mr-2 text-center leading-4 text-xs">
@@ -196,7 +206,8 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
                   </div>
                   <div className="bg-black/40 p-3 rounded-lg border border-purple-700/30">
                     <p className="text-xs sm:text-sm text-purple-300">
-                      <span className="font-semibold">💡 Explanation:</span> {q.explanation}
+                      <span className="font-semibold">💡 Explanation:</span>{" "}
+                      {q.explanation}
                     </p>
                   </div>
                 </div>
@@ -213,27 +224,32 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   if (showResults) {
-    const percentage = Math.round((score / questionSet.length) * 100)
+    const percentage = Math.round((score / questionSet.length) * 100);
     return (
       <div
         style={{
-          background: "radial-gradient(circle at center, rgba(91, 28, 154, 0.37) 0%, #000000 100%)",
+          background:
+            "radial-gradient(circle at center, rgba(91, 28, 154, 0.37) 0%, #000000 100%)",
         }}
         className="min-h-screen flex items-center justify-center p-4 sm:p-6"
       >
         <div className="w-full max-w-md">
           <div className="backdrop-blur-lg bg-black/30 p-6 sm:p-8 rounded-2xl border border-purple-800/40 shadow-[0_0_40px_rgba(138,43,226,0.25)] text-center space-y-6">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">Quiz Completed! 🎉</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">
+              Quiz Completed! 🎉
+            </h2>
             <div className="space-y-2">
               <p className="text-base sm:text-lg text-gray-300">Your Score</p>
               <p className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
                 {score}/{questionSet.length}
               </p>
-              <p className="text-base sm:text-lg text-purple-300 font-semibold">{percentage}% Correct</p>
+              <p className="text-base sm:text-lg text-purple-300 font-semibold">
+                {percentage}% Correct
+              </p>
             </div>
 
             <div className="space-y-3 pt-4">
@@ -252,15 +268,6 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
                   🔄 Retry Incorrect ({incorrectQs.length})
                 </button>
               )}
-
-              {learningMode && (
-                <button
-                  onClick={handleRetryIncorrect}
-                  className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white py-2 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-all shadow-[0_0_15px_rgba(234,179,8,0.5)] hover:shadow-[0_0_25px_rgba(234,179,8,0.7)]"
-                >
-                  🔄 Retry Quiz
-                </button>
-              )}
             </div>
 
             <button
@@ -272,13 +279,14 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   return (
     <div
       style={{
-        background: "radial-gradient(circle at center, rgba(91, 28, 154, 0.37) 0%, #000000 100%)",
+        background:
+          "radial-gradient(circle at center, rgba(91, 28, 154, 0.37) 0%, #000000 100%)",
       }}
       className="min-h-screen flex flex-col"
     >
@@ -289,8 +297,8 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
           {selectedWeeks?.length === 12
             ? "All Weeks"
             : selectedWeeks?.length > 1
-              ? `Weeks ${selectedWeeks.join(", ")}`
-              : `Week ${selectedWeeks?.[0] || "1"}`}
+            ? `Weeks ${selectedWeeks.join(", ")}`
+            : `Week ${selectedWeeks?.[0] || "1"}`}
         </h1>
 
         <div className="flex items-center gap-2 sm:gap-4 w-full sm:w-auto">
@@ -314,20 +322,24 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
         <div className="hidden lg:block w-64 backdrop-blur-lg bg-black/20 border-r border-purple-800/40 p-6 overflow-y-auto">
           <div className="space-y-6">
             <div>
-              <h3 className="text-sm font-semibold text-purple-300 mb-4 uppercase tracking-wide">Questions</h3>
+              <h3 className="text-sm font-semibold text-purple-300 mb-4 uppercase tracking-wide">
+                Questions
+              </h3>
               <div className="grid grid-cols-4 gap-3">
                 {questionSet.map((_, qIndex) => {
-                  const isAnswered = answeredQuestions[qIndex] !== undefined
-                  const isViewed = viewedQuestions.has(qIndex)
-                  let bgColor = "bg-black/40 text-gray-300 border-purple-700/40"
-                  let borderColor = "border-purple-700/40"
+                  const isAnswered = answeredQuestions[qIndex] !== undefined;
+                  const isViewed = viewedQuestions.has(qIndex);
+                  let bgColor =
+                    "bg-black/40 text-gray-300 border-purple-700/40";
+                  let borderColor = "border-purple-700/40";
 
                   if (isAnswered) {
-                    bgColor = "bg-green-500/20 text-green-300 border-green-500/50"
-                    borderColor = "border-green-500/50"
+                    bgColor =
+                      "bg-green-500/20 text-green-300 border-green-500/50";
+                    borderColor = "border-green-500/50";
                   } else if (isViewed) {
-                    bgColor = "bg-red-500/20 text-red-300 border-red-500/50"
-                    borderColor = "border-red-500/50"
+                    bgColor = "bg-red-500/20 text-red-300 border-red-500/50";
+                    borderColor = "border-red-500/50";
                   }
 
                   return (
@@ -342,7 +354,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
                     >
                       {qIndex + 1}
                     </button>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -360,11 +372,14 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
 
             <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
               {current.options.map((opt, i) => {
-                const isSelected = selected === i
-                const isCorrect = i === current.correctIndex
-                const isWrongSelected = selected !== null && selected !== current.correctIndex && learningMode
-                const shouldGlow = isWrongSelected && isCorrect
-                const isLocked = answeredQuestions[index] !== undefined
+                const isSelected = selected === i;
+                const isCorrect = i === current.correctIndex;
+                const isWrongSelected =
+                  selected !== null &&
+                  selected !== current.correctIndex &&
+                  learningMode;
+                const shouldGlow = isWrongSelected && isCorrect;
+                const isLocked = answeredQuestions[index] !== undefined;
 
                 return (
                   <button
@@ -375,10 +390,10 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
                       shouldGlow
                         ? "bg-gradient-to-r from-green-600/40 to-green-500/40 border-green-400 text-white shadow-[0_0_30px_rgba(34,197,94,0.6)] animate-pulse"
                         : isSelected
-                          ? "bg-gradient-to-r from-purple-600/40 to-indigo-600/40 border-purple-400 text-white shadow-[0_0_20px_rgba(168,85,247,0.4)]"
-                          : isLocked
-                            ? "bg-black/40 border-purple-700/40 text-gray-400 cursor-not-allowed opacity-60"
-                            : "bg-black/40 border-purple-700/40 text-gray-100 hover:bg-black/60 hover:border-purple-600/60"
+                        ? "bg-gradient-to-r from-purple-600/40 to-indigo-600/40 border-purple-400 text-white shadow-[0_0_20px_rgba(168,85,247,0.4)]"
+                        : isLocked
+                        ? "bg-black/40 border-purple-700/40 text-gray-400 cursor-not-allowed opacity-60"
+                        : "bg-black/40 border-purple-700/40 text-gray-100 hover:bg-black/60 hover:border-purple-600/60"
                     }`}
                   >
                     <span className="inline-block w-6 h-6 rounded-full border-2 mr-3 text-center leading-5 text-xs">
@@ -386,7 +401,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
                     </span>
                     {opt}
                   </button>
-                )
+                );
               })}
             </div>
 
@@ -405,23 +420,29 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
                     ❌ Incorrect! The correct answer is highlighted above.
                   </p>
                 )}
-                <p className="text-xs sm:text-sm text-gray-300">{current.explanation}</p>
+                <p className="text-xs sm:text-sm text-gray-300">
+                  {current.explanation}
+                </p>
               </div>
             )}
 
             {/* Mobile Question Palette - Shown only on mobile screens */}
             <div className="lg:hidden mb-6 sm:mb-8 p-4 backdrop-blur-sm bg-purple-900/20 rounded-lg border border-purple-700/40">
-              <h3 className="text-xs font-semibold text-purple-300 mb-3 uppercase tracking-wide">Questions</h3>
+              <h3 className="text-xs font-semibold text-purple-300 mb-3 uppercase tracking-wide">
+                Questions
+              </h3>
               <div className="grid grid-cols-6 sm:grid-cols-8 gap-2">
                 {questionSet.map((_, qIndex) => {
-                  const isAnswered = answeredQuestions[qIndex] !== undefined
-                  const isViewed = viewedQuestions.has(qIndex)
-                  let bgColor = "bg-black/40 text-gray-300 border-purple-700/40"
+                  const isAnswered = answeredQuestions[qIndex] !== undefined;
+                  const isViewed = viewedQuestions.has(qIndex);
+                  let bgColor =
+                    "bg-black/40 text-gray-300 border-purple-700/40";
 
                   if (isAnswered) {
-                    bgColor = "bg-green-500/20 text-green-300 border-green-500/50"
+                    bgColor =
+                      "bg-green-500/20 text-green-300 border-green-500/50";
                   } else if (isViewed) {
-                    bgColor = "bg-red-500/20 text-red-300 border-red-500/50"
+                    bgColor = "bg-red-500/20 text-red-300 border-red-500/50";
                   }
 
                   return (
@@ -436,7 +457,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
                     >
                       {qIndex + 1}
                     </button>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -444,7 +465,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
         </div>
       </div>
 
-      {/* Footer Navigation - Responsive button layout with stacking on mobile */}
+      {/* Footer Navigation*/}
       <div className="backdrop-blur-lg bg-black/30 border-t border-purple-800/40 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
         <button
           onClick={handlePrevious}
@@ -465,7 +486,9 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
         <div className="flex gap-2 sm:gap-3 w-full sm:w-auto order-2 sm:order-none">
           <button
             onClick={handleSubmit}
-            disabled={selected === null || answeredQuestions[index] !== undefined}
+            disabled={
+              selected === null || answeredQuestions[index] !== undefined
+            }
             className={`flex-1 sm:flex-none px-4 sm:px-6 py-2 rounded-full font-semibold text-sm sm:text-base transition-all duration-200 border ${
               selected === null || answeredQuestions[index] !== undefined
                 ? "bg-black/40 text-gray-500 cursor-not-allowed border-gray-700/40"
@@ -489,5 +512,5 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
         </div>
       </div>
     </div>
-  )
+  );
 }
