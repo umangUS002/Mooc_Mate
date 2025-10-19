@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react"
 
-<<<<<<< HEAD
 export default function QuizPage({ questions, learningMode, onRestart, selectedWeeks }) {
   const [index, setIndex] = useState(0)
   const [selected, setSelected] = useState(null)
@@ -15,24 +14,6 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
   const [answeredQuestions, setAnsweredQuestions] = useState({})
   const [viewedQuestions, setViewedQuestions] = useState(new Set([0]))
   const sliderRef = useRef(null)
-=======
-export default function QuizPage({
-  questions,
-  learningMode,
-  onRestart,
-  selectedWeeks,
-}) {
-  const [index, setIndex] = useState(0);
-  const [selected, setSelected] = useState(null);
-  const [score, setScore] = useState(0);
-  const [showResults, setShowResults] = useState(false);
-  const [showReview, setShowReview] = useState(false);
-  const [incorrectQs, setIncorrectQs] = useState([]);
-  const [timeLeft, setTimeLeft] = useState(learningMode ? null : 0);
-  const [questionSet, setQuestionSet] = useState(questions);
-  const [answeredQuestions, setAnsweredQuestions] = useState({});
-  const [viewedQuestions, setViewedQuestions] = useState(new Set([0]));
->>>>>>> 59ce91b44f97ddd1e88c747237a69f7d99b978a3
 
   const current = questionSet[index]
 
@@ -40,7 +21,6 @@ export default function QuizPage({
     setViewedQuestions((prev) => new Set([...prev, index]))
   }, [index])
 
-<<<<<<< HEAD
   useEffect(() => {
     if (!learningMode && !showResults && timeLeft > 0) {
       const timer = setInterval(() => setTimeLeft((prev) => prev - 1), 1000)
@@ -58,19 +38,6 @@ export default function QuizPage({
       }
     }
   }, [index])
-=======
-  // Timer countdown (only for test mode)
-  const MAX_TIME = 1800; // e.g., stop at 60 seconds
-
-useEffect(() => {
-  if (!learningMode && !showResults && timeLeft < MAX_TIME) {
-    const timer = setInterval(() => setTimeLeft((prev) => prev + 1), 1000);
-    return () => clearInterval(timer);
-  } else if (timeLeft >= MAX_TIME) {
-    setShowResults(true);
-  }
-}, [learningMode, showResults, timeLeft]);
->>>>>>> 59ce91b44f97ddd1e88c747237a69f7d99b978a3
 
   const recordAnswerOnce = (qIndex, selectedIdx) => {
     if (answeredQuestions[qIndex] !== undefined) return
