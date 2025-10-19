@@ -14,7 +14,7 @@ export default function QuizPage({
   const [showResults, setShowResults] = useState(false);
   const [showReview, setShowReview] = useState(false);
   const [incorrectQs, setIncorrectQs] = useState([]);
-  const [timeLeft, setTimeLeft] = useState(learningMode ? null : 600);
+  const [timeLeft, setTimeLeft] = useState(learningMode ? null : 0);
   const [questionSet, setQuestionSet] = useState(questions);
   const [answeredQuestions, setAnsweredQuestions] = useState({});
   const [viewedQuestions, setViewedQuestions] = useState(new Set([0]));
@@ -26,14 +26,16 @@ export default function QuizPage({
   }, [index]);
 
   // Timer countdown (only for test mode)
-  useEffect(() => {
-    if (!learningMode && !showResults && timeLeft > 0) {
-      const timer = setInterval(() => setTimeLeft((prev) => prev - 1), 1000);
-      return () => clearInterval(timer);
-    } else if (timeLeft === 0) {
-      setShowResults(true);
-    }
-  }, [learningMode, showResults, timeLeft]);
+  const MAX_TIME = 1800; // e.g., stop at 60 seconds
+
+useEffect(() => {
+  if (!learningMode && !showResults && timeLeft < MAX_TIME) {
+    const timer = setInterval(() => setTimeLeft((prev) => prev + 1), 1000);
+    return () => clearInterval(timer);
+  } else if (timeLeft >= MAX_TIME) {
+    setShowResults(true);
+  }
+}, [learningMode, showResults, timeLeft]);
 
   // Helper: record answer only once per question
   const recordAnswerOnce = (qIndex, selectedIdx) => {

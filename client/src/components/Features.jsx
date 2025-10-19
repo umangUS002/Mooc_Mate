@@ -34,7 +34,7 @@ const features = () => {
                             <h3 className="text-base font-medium text-white">
                                 {feature.title}
                             </h3>
-                            <p className="text-slate-400 line-clamp-2 pb-4">
+                            <p className="text-slate-400 line-clamp-50 pb-4">
                                 {feature.description}
                             </p>
                         </div>
