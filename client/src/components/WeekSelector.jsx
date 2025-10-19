@@ -20,7 +20,7 @@ export default function WeekSelector({ selectedWeeks, setSelectedWeeks }) {
         Select Weeks
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:w-4xl">
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
         {[...Array(12)].map((_, i) => {
           const week = i + 1;
           const isSelected = selectedWeeks.includes(week);
@@ -29,14 +29,14 @@ export default function WeekSelector({ selectedWeeks, setSelectedWeeks }) {
             <div
               key={week}
               onClick={() => toggleWeek(week)}
-              className={`cursor-pointer flex justify-between items-center max-sm:w-70 p-5 rounded-2xl border transition-all duration-300 backdrop-blur-sm
+              className={`cursor-pointer flex gap-2 items-center md:flex-row flex-col p-5 rounded-2xl border transition-all duration-300 backdrop-blur-sm
                 ${isSelected
                   ? "border-purple-500 bg-purple-900/30 shadow-[0_0_25px_rgba(168,85,247,0.4)] scale-[1.03]"
                   : "border-gray-800 bg-black/40 hover:border-purple-600 hover:bg-purple-900/20 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]"
                 }`}
             >
               <span
-                className={`font-semibold text-lg ${isSelected ? "text-purple-300" : "text-gray-200"
+                className={`font-semibold text-md ${isSelected ? "text-purple-300" : "text-gray-200"
                   }`}
               >
                 Week {week}

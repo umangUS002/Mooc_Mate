@@ -5,7 +5,7 @@ export default function CourseDescription() {
   return (
     <div
       className="w-full max-w-5xl mx-auto rounded-3xl border border-purple-900/30 
-                 bg-black/40 backdrop-blur-md p-4 shadow-[0_0_35px_rgba(168,85,247,0.25)] 
+                 bg-black/40 backdrop-blur-md p-10 shadow-[0_0_35px_rgba(168,85,247,0.25)] 
                  text-gray-200 mb-10"
     >
       {/* Title */}
