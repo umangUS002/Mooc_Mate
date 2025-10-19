@@ -10,11 +10,11 @@ function Footer() {
             Contact Us
           </a>
           <div className="h-8 w-px bg-white/20"></div>
-          <a href="#" className="hover:text-white transition-all">
+          <a href="https://www.linkedin.com/in/umang-srivastava-339b131b6/" className="hover:text-white transition-all">
             Umang Srivastava
           </a>
           <div className="h-8 w-px bg-white/20"></div>
-          <a href="#" className="hover:text-white transition-all">
+          <a href="https://www.linkedin.com/in/zaid-alam/" className="hover:text-white transition-all">
             Zaid Alam
           </a>
         </div>

@@ -13,11 +13,11 @@ function Navbar() {
                         </a>
 
                         <div className="cursor-pointer hidden text-white md:flex items-center gap-8 transition duration-500">
+                            <a onClick={()=>navigate('/')} className="hover:text-slate-300 transition">
+                                Home
+                            </a>
                             <a onClick={()=>navigate('/testPage')} className="hover:text-slate-300 transition">
                                 Practice
-                            </a>
-                            <a href="#resources" className="hover:text-slate-300 transition">
-                                Resources
                             </a>
                             <a href="#footer" className="hover:text-slate-300 transition">
                                 Contact Us
