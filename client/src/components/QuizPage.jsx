@@ -9,20 +9,31 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
   const [showResults, setShowResults] = useState(false)
   const [showReview, setShowReview] = useState(false)
   const [incorrectQs, setIncorrectQs] = useState([])
-  const [timeLeft, setTimeLeft] = useState(learningMode ? null : 600)
   const [questionSet, setQuestionSet] = useState(questions)
   const [answeredQuestions, setAnsweredQuestions] = useState({})
   const [viewedQuestions, setViewedQuestions] = useState(new Set([0]))
+  const [timeLeft, setTimeLeft] = useState(null)
   const sliderRef = useRef(null)
 
   const current = questionSet[index]
+
+  // Calculate timer based on number of questions (10 questions per week = 1 minute per question)
+  useEffect(() => {
+    if (!learningMode) {
+      const numQuestions = questions?.length || 10
+      const numWeeks = Math.ceil(numQuestions / 10)
+      const timeInMinutes = numWeeks * 10
+      const timeInSeconds = timeInMinutes * 60
+      setTimeLeft(timeInSeconds)
+    }
+  }, [questions, learningMode])
 
   useEffect(() => {
     setViewedQuestions((prev) => new Set([...prev, index]))
   }, [index])
 
   useEffect(() => {
-    if (!learningMode && !showResults && timeLeft > 0) {
+    if (!learningMode && !showResults && timeLeft !== null && timeLeft > 0) {
       const timer = setInterval(() => setTimeLeft((prev) => prev - 1), 1000)
       return () => clearInterval(timer)
     } else if (timeLeft === 0) {
@@ -145,21 +156,6 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
     return `${m}:${s < 10 ? "0" + s : s}`
   }
 
-  const handleRetryIncorrect = () => {
-    if (incorrectQs.length > 0) {
-      setShowResults(false)
-      setShowReview(false)
-      setQuestionSet(incorrectQs)
-      setIndex(0)
-      setScore(0)
-      setSelected(null)
-      setIncorrectQs([])
-      setTimeLeft(learningMode ? null : 600)
-      setAnsweredQuestions({})
-      setViewedQuestions(new Set([0]))
-    }
-  }
-
   if (showReview) {
     return (
       <div
@@ -195,7 +191,6 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
                       </div>
                     ))}
                   </div>
-                  
                 </div>
               ))}
             </div>
@@ -274,7 +269,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
           </h1>
 
           <div className="flex items-center gap-4">
-            {!learningMode && (
+            {!learningMode && timeLeft !== null && (
               <div className="text-lg font-semibold text-red-400 bg-red-500/10 px-4 py-2 rounded-full border border-red-500/30">
                 ⏱ {formatTime(timeLeft)}
               </div>

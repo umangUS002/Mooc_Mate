@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import week1 from "../data/week1.json";
 import week2 from "../data/week2.json";
+import week3 from "../data/week3.json";
+import week4 from "../data/week4.json";
+import week5 from "../data/week5.json";
 import week6 from "../data/week6.json";
 import week7 from "../data/week7.json";
 import week8 from "../data/week8.json";
 import week9 from "../data/week9.json";
 import week10 from "../data/week10.json";
 import week11 from "../data/week11.json";
+import week12 from "../data/week12.json";
 import WeekSelector from "../components/WeekSelector";
 import QuizPage from "../components/QuizPage";
 import Footer from "../components/Footer";
@@ -30,12 +34,16 @@ function TestPage() {
     const weekData = {
       1: week1,
       2: week2,
+      3: week3,
+      4: week4,
+      5: week5,
       6: week6,
       7: week7,
       8: week8,
       9: week9,
       10: week10,
       11: week11,
+      12: week12,
     };
 
     let selectedData = [];

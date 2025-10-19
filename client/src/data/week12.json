@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Sustainability in the context of environmental sustainability is ____.",
+    "options": [
+      "multidimensional",
+      "bidimensional",
+      "unidimensional",
+      "none of the given"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "question": "As discussed by the Brundtland commission, sustainable development was the solution to the problems of ___.",
+    "options": [
+      "poor health",
+      "recession",
+      "poverty",
+      "environmental degradation"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "question": "Environmental sustainability focuses on the impacts of processes, products and services on ___.",
+    "options": [
+      "biodiversity",
+      "ocean environment",
+      "air",
+      "all of the above"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "question": "Social entrepreneurship is defined as solving social problems using ___.",
+    "options": [
+      "generational wealth",
+      "market-based methods",
+      "bank loans",
+      "magical methods"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "question": "HESI stands for.",
+    "options": [
+      "Health and Education Sustainability Initiative",
+      "Higher Education Systematic Initiative",
+      "Higher Education Sustainability Initiative",
+      "none of the above"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "question": "Universal primary and secondary education is an outcome target of ___.",
+    "options": [
+      "SDG 1",
+      "SDG 2",
+      "SDG 3",
+      "SDG 4"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "question": "___ is a target group for ESD for 2030 framework.",
+    "options": [
+      "policymakers",
+      "parents",
+      "institutional leaders",
+      "all of the above"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "question": "Successful implementation of ESD requires a shift in focus to ___.",
+    "options": [
+      "learning",
+      "teaching",
+      "exploiting",
+      "reading"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "___ competency refers to the ability to reflect on one's own role in community and society.",
+    "options": [
+      "self-awareness",
+      "emotional",
+      "normative",
+      "anticipatory"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "In 2021, the European Centre for the Development of Vocational Training published a skills forecast scenario on the likely employment and skills implications of the ___.",
+    "options": [
+      "European Greenhouse Initiative",
+      "European Green Deal",
+      "European Green Agreement",
+      "none of the above"
+    ],
+    "correctIndex": 1
+  }
+]
