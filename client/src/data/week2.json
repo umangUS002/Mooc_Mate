@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "question": "According to constructivism, reality is determined by",
+    "options": [
+      "the experiences of the learner",
+      "the blood type of the learner",
+      "the future goals of the learner",
+      "none of the above"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 2,
+    "question": "Teachers and instructors who understand the constructivist learning theory understand that their students",
+    "options": [
+      "are all the same",
+      "bring their own unique experiences",
+      "do not demand much effort in the classroom",
+      "are careless"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 3,
+    "question": "The domain of social constructivism is largely attributed to the work done by __________ by adding the focus on societal and peer influence on learning.",
+    "options": [
+      "Jean Piaget",
+      "Lev Vygotsky,",
+      "Sigmund Freud",
+      "John Watson"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 4,
+    "question": "Which of the following is not a major type of learning described by behavioral psychology?",
+    "options": [
+      "classical conditioning",
+      "operant conditioning",
+      "observational learning",
+      "traditional learning"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 5,
+    "question": "Which of the following is true according to behaviorism?",
+    "options": [
+      "all behaviors can be unlearned",
+      "all behaviors are directed by one's parents",
+      "all behaviors are fundamentally destructive in nature",
+      "all behaviors are unobservable"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "In __________ conditioning, presentation of unconditioned stimulus precedes the presentation of the conditioned stimulus.",
+    "options": [
+      "backward",
+      "delay",
+      "trace",
+      "simultaneous"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "Smiling and complimenting students for good performance is a type of",
+    "options": [
+      "negative punishment",
+      "positive punishment",
+      "negative reinforcement",
+      "positive reinforcement"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 8,
+    "question": "Which of the following psychologists was instrumental in engendering the dramatic shift from behaviorism to cognitive theories?",
+    "options": [
+      "Tolman",
+      "Bruner",
+      "Gestalt",
+      "All of the above"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 9,
+    "question": "IQ is a typical measurement for",
+    "options": [
+      "intelligence",
+      "personality",
+      "emotions",
+      "classical learning"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "BBL deals with the concept of learning in a __________ context.",
+    "options": [
+      "neuro-physiological",
+      "cognitive",
+      "social",
+      "behavioral"
+    ],
+    "correctIndex": 0
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "question": "Which of the following is false about learning according to Gagne's definition?",
+    "options": [
+      "It is a change in human disposition",
+      "It persists over a period of time",
+      "It is simply ascribable to processes of growth",
+      "None of the above"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 2,
+    "question": "Manual or physical skills come under __________ component of Bloom's taxonomy.",
+    "options": [
+      "Cognitive",
+      "Affective",
+      "Psychomotor",
+      "Physical"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 3,
+    "question": "Reflection, learning and education was explored by",
+    "options": [
+      "Carl Rogers",
+      "John Watson",
+      "Benjamin Bloom",
+      "John Dewey"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 4,
+    "question": "The principles of __________ refer to how close in time two events must be for a bond to be formed.",
+    "options": [
+      "behavior",
+      "reinforcement",
+      "repetition",
+      "contiguity"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 5,
+    "question": "__________ gives information to learners about their success or failure concerning the task at hand.",
+    "options": [
+      "Cognitive feedback",
+      "Emotional feedback",
+      "Reinforcement",
+      "Physical feedback"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "The __________ orientation to learning has a quality of personal involvement-the whole person in both feeling and cognitive aspects being in the learning event.",
+    "options": [
+      "behavioral",
+      "cognitive",
+      "humanistic",
+      "social"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 7,
+    "question": "Learning through play is __________ learning.",
+    "options": [
+      "primary",
+      "secondary",
+      "passive",
+      "active"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 8,
+    "question": "People with __________ learning style are prone to sorting their ideas after speaking, rather than thinking ideas through before.",
+    "options": [
+      "logical",
+      "solitary",
+      "visual",
+      "auditory"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 9,
+    "question": "Which of the following statements is false?",
+    "options": [
+      "Effective instruction is static",
+      "Effective instruction is eclectic",
+      "Effective instruction is generative",
+      "Effective instruction is interactive"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "In ADDIE model, I stand for",
+    "options": [
+      "instruction",
+      "implementation",
+      "integration",
+      "induction"
+    ],
+    "correctIndex": 1
+  }
+]

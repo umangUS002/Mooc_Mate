@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "question": "A __________ classroom is the changing face of learning.",
+    "options": [
+      "digital",
+      "closed",
+      "passive",
+      "none of the above"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is not a feature of e-learning?",
+    "options": [
+      "accessibility",
+      "teacher-centeredness",
+      "social justice",
+      "personalization"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 3,
+    "question": "Which of the following is a synonym of e-learning?",
+    "options": [
+      "audio-visual learning",
+      "multimedia learning",
+      "distance learning",
+      "none of the above"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 4,
+    "question": "In __________ e-learning course, the content is simple and comprises text, images, audio, power-point presentation and text questions.",
+    "options": [
+      "simulation-based",
+      "interactive",
+      "powerpoint-driven",
+      "text-driven"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 5,
+    "question": "Recent thinking in cognitive psychology places the __________ firmly at the center of the learning experience.",
+    "options": [
+      "computer",
+      "parent",
+      "teacher",
+      "individual"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 6,
+    "question": "Which of the following is true?",
+    "options": [
+      "Learning depends on self-awareness.",
+      "Learning is social",
+      "Learning is goal-oriented",
+      "All of the above"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 7,
+    "question": "Learners may multitask when engaging in an online course, which could be resulting in __________.",
+    "options": [
+      "hyperfocus",
+      "better retrieval",
+      "shorter attention spans",
+      "None of the given"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 8,
+    "question": "The brain can process __________ visual cues per hour!",
+    "options": [
+      "36",
+      "360",
+      "3600",
+      "36,000"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 9,
+    "question": "Our brain has approximately __________ neurons that send information to one another.",
+    "options": [
+      "85 billion",
+      "85 million",
+      "85 lakhs",
+      "85,000"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "__________ is referring to learners' automatic performance on specific procedures with predetermined steps to be followed.",
+    "options": [
+      "chaining",
+      "automatization",
+      "framing",
+      "none of the above"
+    ],
+    "correctIndex": 0
+  }
+]

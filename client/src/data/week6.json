@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "question": "__________ is mainly responsible for popularizing emotional intelligence.",
+    "options": [
+      "John Watson",
+      "Daniel Goleman",
+      "Sigmund Freud",
+      "Albert Bandura"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 2,
+    "question": "EQ is used to measure",
+    "options": [
+      "cognitive intelligence",
+      "memory",
+      "emotional intelligence",
+      "attention"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 3,
+    "question": "Experts suggest that EQ is more important than IQ.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 4,
+    "question": "Being able to put words to feelings refers to",
+    "options": [
+      "emotional responsibility",
+      "emotional cognition",
+      "emotional attention",
+      "emotional literacy"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 5,
+    "question": "The first step in emotional intelligence is",
+    "options": [
+      "perceiving emotions accurately",
+      "reasoning with emotions",
+      "managing emotions",
+      "dismissing emotions"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "According to nine-layer model pyramid, __________ lies at the bottom of the pyramid.",
+    "options": [
+      "Emotional stimuli",
+      "Self awareness",
+      "Self management",
+      "Transcendence"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "The mixed model by __________ claims that EQ is a combination of competencies, skills, and \"facilitators\" that contribute to how people express themselves, respond to challenges in their environment, and connect with others.",
+    "options": [
+      "Watson",
+      "Goleman",
+      "Salovey and Mayer",
+      "Bar-On"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 8,
+    "question": "The transfer of emotions from one person to another is called",
+    "options": [
+      "social effect",
+      "emotional effect",
+      "social contagion",
+      "emotional contagion"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 9,
+    "question": "Hochschild has given the concept of __________ using the example of flight attendants.",
+    "options": [
+      "emotional indifference",
+      "emotional difficulty",
+      "emotional labor",
+      "emotional literacy"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 10,
+    "question": "Review of literature shows that __________ is associated with increasing levels of burnout.",
+    "options": [
+      "emotional intelligence.",
+      "deep acting",
+      "surface acting",
+      "emotional literacy"
+    ],
+    "correctIndex": 2
+  }
+]

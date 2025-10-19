@@ -1,10 +1,11 @@
 import React from "react";
+import { CheckCircle } from "lucide-react";
 
 export default function WeekSelector({ selectedWeeks, setSelectedWeeks }) {
   const toggleWeek = (week) => {
-    setSelectedWeeks(prev =>
+    setSelectedWeeks((prev) =>
       prev.includes(week)
-        ? prev.filter(w => w !== week)
+        ? prev.filter((w) => w !== week)
         : [...prev, week]
     );
   };
@@ -14,22 +15,54 @@ export default function WeekSelector({ selectedWeeks, setSelectedWeeks }) {
   };
 
   return (
-    <div>
-      <h2 className="text-xl font-semibold mb-2">Select Weeks</h2>
-      <div className="grid grid-cols-3 gap-2 text-left max-w-xs mx-auto">
-        {[...Array(12)].map((_, i) => (
-          <label key={i}>
-            <input
-              type="checkbox"
-              checked={selectedWeeks.includes(i + 1)}
-              onChange={() => toggleWeek(i + 1)}
-            /> Week {i + 1}
-          </label>
-        ))}
+    <div className="flex flex-col items-center">
+      <h2 className="text-2xl font-bold text-purple-300 mb-6 tracking-wide">
+        Select Weeks
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:w-4xl">
+        {[...Array(12)].map((_, i) => {
+          const week = i + 1;
+          const isSelected = selectedWeeks.includes(week);
+
+          return (
+            <div
+              key={week}
+              onClick={() => toggleWeek(week)}
+              className={`cursor-pointer flex justify-between items-center max-sm:w-70 p-5 rounded-2xl border transition-all duration-300 backdrop-blur-sm
+                ${isSelected
+                  ? "border-purple-500 bg-purple-900/30 shadow-[0_0_25px_rgba(168,85,247,0.4)] scale-[1.03]"
+                  : "border-gray-800 bg-black/40 hover:border-purple-600 hover:bg-purple-900/20 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]"
+                }`}
+            >
+              <span
+                className={`font-semibold text-lg ${isSelected ? "text-purple-300" : "text-gray-200"
+                  }`}
+              >
+                Week {week}
+              </span>
+
+              <div
+                className={`flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium transition-all ${isSelected
+                    ? "bg-purple-600/80 text-white"
+                    : "bg-gray-800 text-gray-300"
+                  }`}
+              >
+                <CheckCircle
+                  size={16}
+                  className={isSelected ? "text-white" : "text-purple-400"}
+                />
+                10 Questions
+              </div>
+            </div>
+          );
+        })}
       </div>
+
       <button
         onClick={handleFullTest}
-        className="mt-3 bg-green-600 text-white px-3 py-1 rounded"
+        className="mt-8 bg-cyan-600 hover:bg-cyan-400 text-white font-semibold px-6 py-3 rounded-xl transition-all shadow-[0_0_25px_rgba(168,85,247,0.5)] 
+                   hover:shadow-[0_0_35px_rgba(168,85,247,0.7)]"
       >
         Full Test (All Weeks)
       </button>

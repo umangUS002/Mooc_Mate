@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "question": "The __________ Model for New Normal in Education has been designed by many educational institutions.",
+    "options": [
+      "Pedagogical",
+      "Readiness",
+      "Instructional",
+      "Systematic"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 2,
+    "question": "The most critical factor that plays a significant role in the success of any remote learning program is the __________",
+    "options": [
+      "software used by teacher",
+      "readiness of the participants",
+      "personality of the teacher",
+      "the quality of schooling"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 3,
+    "question": "The typical picture of a teacher being a __________ of knowledge to the students has been replaced.",
+    "options": [
+      "absorber",
+      "collector",
+      "exploiter",
+      "dispenser"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 4,
+    "question": "What does today's teacher need to be successful in the classroom?",
+    "options": [
+      "digital skills",
+      "life skills",
+      "communication skills",
+      "all of the above"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 5,
+    "question": "Students who consider intelligence as a __________ entity tend to focus on their goals despite obstacles.",
+    "options": [
+      "malleable",
+      "rigid",
+      "God-given",
+      "unreliable"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "__________ feedback to students is important for learning.",
+    "options": [
+      "clear",
+      "explanatory",
+      "timely",
+      "all of the above"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 7,
+    "question": "Students tend to enjoy learning and have better outcomes when their motivation is more intrinsic than extrinsic.",
+    "options": [
+      "False",
+      "True"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 8,
+    "question": "Long term goals are also called __________ goals.",
+    "options": [
+      "non urgent",
+      "principal",
+      "proximal",
+      "distal"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 9,
+    "question": "Which of the following is an example of a reward?",
+    "options": [
+      "clapping",
+      "giving money",
+      "giving a compliment",
+      "all of the above"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 10,
+    "question": "__________ is a teaching approach that generates feedback students can use to improve their performance.",
+    "options": [
+      "Assessment for performance",
+      "Assessment for marks",
+      "Assessment for rewards",
+      "Assessment for learning"
+    ],
+    "correctIndex": 3
+  }
+]

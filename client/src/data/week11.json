@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "question": "Social cognition is the cognitive processes that influence",
+    "options": [
+      "social schema",
+      "social behavior",
+      "social media",
+      "none of the above"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 2,
+    "question": "Smooth and adaptive social interactions depend on the recruitment of",
+    "options": [
+      "perception",
+      "attention",
+      "language",
+      "all of the above"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 3,
+    "question": "Which of the following abilities does not come under social cognition?",
+    "options": [
+      "rote memory",
+      "face processing",
+      "joint attention",
+      "moral reasoning"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 4,
+    "question": "Social cognition develops primarily in old age.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 5,
+    "question": "A theory of mind refers to a person's ability to understand and think about the __________ of other people.",
+    "options": [
+      "biological states",
+      "mental states",
+      "physical traits",
+      "none of the above"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 6,
+    "question": "The __________ theory details the processes of observational learning and modeling, and the influence of self-efficacy on the production of behavior.",
+    "options": [
+      "behavioral",
+      "socio-emotional",
+      "social-cognitive",
+      "cognitive-emotional"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 7,
+    "question": "__________ processes account for the information that is selected for observation in the environment.",
+    "options": [
+      "motivational",
+      "production",
+      "retention",
+      "attentional"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 8,
+    "question": "Children become more aggressive when they observe aggressive or violent models.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 9,
+    "question": "The __________ model of observational learning involves real or fictional characters displaying behaviors in books, films, television programs, or online media.",
+    "options": [
+      "symbolic",
+      "live",
+      "verbal instructional",
+      "contextual"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "__________ refers to the anticipated consequences of a person's behavior.",
+    "options": [
+      "self-efficacy",
+      "expectations",
+      "intrinsic reinforcement",
+      "extrinsic reinforcement"
+    ],
+    "correctIndex": 1
+  }
+]

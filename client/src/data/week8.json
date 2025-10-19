@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "question": "Pedagogy can be defined as a way of __________ any theoretical topic or academic subject.",
+    "options": [
+      "forgetting",
+      "teaching",
+      "remembering",
+      "memorizing"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 2,
+    "question": "Good pedagogy is about",
+    "options": [
+      "enabling self to be good at rote memorization",
+      "eliciting responses that demonstrate understanding",
+      "hampering cognitive development of learners",
+      "None of the above"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 3,
+    "question": "Which of the following is a pedagogical approach in teaching?",
+    "options": [
+      "inductive",
+      "integrative",
+      "instance-based",
+      "intuitive"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 4,
+    "question": "According to the __________ approach, learners are the makers of meaning and knowledge.",
+    "options": [
+      "solitary learning",
+      "passive learning",
+      "constructivist learning",
+      "metalearning"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 5,
+    "question": "Which of the following is false about inquiry-based learning?",
+    "options": [
+      "is a form of passive learning",
+      "includes problem-based learning",
+      "generally used in small scale investigations",
+      "starts by posing questions"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "The __________ model describes what effective teachers do in their classrooms to engage students in intellectually challenging work.",
+    "options": [
+      "pedagogical",
+      "systematic",
+      "engagement",
+      "intellectual"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "In experiential learning, experiences are structured to require the student to",
+    "options": [
+      "take initiative",
+      "make decisions",
+      "be accountable for results",
+      "all of the above"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 8,
+    "question": "The following are the roles of an instructor in experiential learning, except",
+    "options": [
+      "setting suitable experiences",
+      "posing problems",
+      "supporting students",
+      "blurring the boundaries"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 9,
+    "question": "Kolb's experiential learning style theory is typically represented by a __________-stage learning cycle",
+    "options": [
+      "three",
+      "five",
+      "four",
+      "seven"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 10,
+    "question": "People with __________ learning style are hands-on learners, and rely on intuition over logic.",
+    "options": [
+      "converging",
+      "accommodating",
+      "integrating",
+      "emotional"
+    ],
+    "correctIndex": 1
+  }
+]
