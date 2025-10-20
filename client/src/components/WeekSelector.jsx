@@ -20,7 +20,7 @@ export default function WeekSelector({ selectedWeeks, setSelectedWeeks }) {
         Select Weeks
       </h2>
 
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
+      <div className="grid grid-cols-3 gap-4 max-sm:gap-2 lg:grid-cols-3">
         {[...Array(12)].map((_, i) => {
           const week = i + 1;
           const isSelected = selectedWeeks.includes(week);
@@ -29,7 +29,7 @@ export default function WeekSelector({ selectedWeeks, setSelectedWeeks }) {
             <div
               key={week}
               onClick={() => toggleWeek(week)}
-              className={`cursor-pointer flex gap-2 items-center md:flex-row flex-col p-5 rounded-2xl border transition-all duration-300 backdrop-blur-sm
+              className={`cursor-pointer flex gap-2 max-sm:gap-1 items-center md:flex-row flex-col p-5 max-sm:p-3 rounded-2xl border transition-all duration-300 backdrop-blur-sm
                 ${isSelected
                   ? "border-purple-500 bg-purple-900/30 shadow-[0_0_25px_rgba(168,85,247,0.4)] scale-[1.03]"
                   : "border-gray-800 bg-black/40 hover:border-purple-600 hover:bg-purple-900/20 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]"
@@ -43,7 +43,7 @@ export default function WeekSelector({ selectedWeeks, setSelectedWeeks }) {
               </span>
 
               <div
-                className={`flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium transition-all ${isSelected
+                className={`flex items-center gap-2 px-3 max-sm:px-1 py-1 rounded-full text-sm font-medium transition-all ${isSelected
                     ? "bg-purple-600/80 text-white"
                     : "bg-gray-800 text-gray-300"
                   }`}
@@ -52,7 +52,7 @@ export default function WeekSelector({ selectedWeeks, setSelectedWeeks }) {
                   size={16}
                   className={isSelected ? "text-white" : "text-purple-400"}
                 />
-                10 Questions
+                10 Qs
               </div>
             </div>
           );

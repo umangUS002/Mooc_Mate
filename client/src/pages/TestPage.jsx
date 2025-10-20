@@ -74,7 +74,7 @@ function TestPage() {
       <div
         className="min-h-screen flex flex-col items-center justify-center text-white p-4 md:p-8 mt-10 md:mt-15 mb-15"
       >
-        <div className="backdrop-blur-lg bg-black/30 p-3 md:p-10 rounded-2xl border border-purple-800/40 shadow-[0_0_40px_rgba(138,43,226,0.25)] max-w-5xl w-full text-center">
+        <div className="backdrop-blur-lg bg-black/30 p-3 md:p-10 max-sm:pb-6 rounded-2xl border border-purple-800/40 shadow-[0_0_40px_rgba(138,43,226,0.25)] max-w-5xl w-full text-center">
           <CourseDescription/>
 
           <div className="mb-8">

@@ -219,7 +219,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
       >
         <div className="w-full max-w-md">
           <div className="backdrop-blur-lg bg-black/30 p-8 rounded-2xl border border-purple-800/40 shadow-[0_0_40px_rgba(138,43,226,0.25)] text-center space-y-6">
-            <h2 className="text-4xl font-bold text-white">Quiz Completed! 🎉</h2>
+            <h2 className="text-4xl font-bold text-white">Quiz Completed!</h2>
             <div className="space-y-2">
               <p className="text-lg text-gray-300">Your Score</p>
               <p className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
@@ -257,7 +257,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
       className="min-h-screen flex flex-col"
     >
       {/* Header */}
-      <div className="backdrop-blur-lg bg-black/30 border-b border-purple-800/40 px-4 py-4">
+      <div className="backdrop-blur-lg bg-black/30 border-b border-purple-800/40 px-4 py-4 max-sm:py-2">
         <div className="flex justify-between items-center max-w-6xl mx-auto">
           <h1 className="text-lg font-bold text-white">
             Quiz -{" "}
@@ -270,13 +270,13 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
 
           <div className="flex items-center gap-4">
             {!learningMode && timeLeft !== null && (
-              <div className="text-lg font-semibold text-red-400 bg-red-500/10 px-4 py-2 rounded-full border border-red-500/30">
+              <div className="text-lg max-sm:text-xs font-semibold text-red-400 bg-red-500/10 px-4 py-2 rounded-full border border-red-500/30">
                 ⏱ {formatTime(timeLeft)}
               </div>
             )}
             <button
               onClick={handleFinish}
-              className="px-6 py-2 rounded-full font-semibold bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 transition-all shadow-[0_0_15px_rgba(168,85,247,0.5)] hover:shadow-[0_0_25px_rgba(168,85,247,0.7)] text-white"
+              className="px-6 max-sm:px-3 max-sm:text-sm py-2 rounded-full font-semibold bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 transition-all shadow-[0_0_15px_rgba(168,85,247,0.5)] hover:shadow-[0_0_25px_rgba(168,85,247,0.7)] text-white"
             >
               Finish Exam
             </button>
@@ -284,8 +284,8 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
         </div>
       </div>
 
-      <div className="backdrop-blur-lg bg-black/20 border-b border-purple-800/40 px-12 py-4 overflow-x-auto scroll-hide">
-        <div ref={sliderRef} className="flex gap-3 min-w-min max-w-6xl mx-auto px-4 items-center justify-center">
+      <div className="backdrop-blur-lg bg-black/20 border-b border-purple-800/40 px-12 py-4 max-sm:py-2 overflow-x-auto scroll-hide">
+        <div ref={sliderRef} className="flex gap-3 min-w-min max-w-6xl mx-auto px-4 max-sm:px-2 items-center justify-center">
           {questionSet.map((_, qIndex) => {
             const isAnswered = answeredQuestions[qIndex] !== undefined
             const isViewed = viewedQuestions.has(qIndex)
@@ -302,7 +302,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
                 key={qIndex}
                 data-question={qIndex}
                 onClick={() => handleJumpToQuestion(qIndex)}
-                className={`w-12 h-12 rounded-full font-semibold text-sm transition-all duration-200 flex items-center justify-center border flex-shrink-0 ${
+                className={`w-12 h-12 max-sm:h-8 max-sm:w-8 rounded-full font-semibold text-sm transition-all duration-200 flex items-center justify-center border flex-shrink-0 ${
                   qIndex === index
                     ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white border-blue-400 ring-2 ring-blue-400/50 scale-110 shadow-[0_0_15px_rgba(37,99,235,0.6)]"
                     : `${bgColor} hover:border-purple-600/60 hover:bg-black/60`
@@ -319,12 +319,12 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
       <div className="flex-1 overflow-y-auto">
         <div className="p-6 max-w-3xl mx-auto w-full">
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-6 text-white">
+            <h2 className="text-2xl max-sm:text-xl font-bold mb-6 max-sm:mb-3 text-white">
               Q{index + 1}. {current.question}
             </h2>
           </div>
 
-          <div className="space-y-4 mb-8">
+          <div className="space-y-4 max-sm:space-y-2 mb-8 max-sm:mb-4">
             {current.options.map((opt, i) => {
               const isSelected = selected === i
               const isCorrect = i === current.correctIndex
@@ -337,7 +337,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
                   key={i}
                   onClick={() => handleSelect(i)}
                   disabled={isLocked}
-                  className={`w-full text-left border-2 p-4 rounded-lg font-medium transition-all duration-200 backdrop-blur-sm ${
+                  className={`w-full text-left border-2 p-4 max-sm:py-2 rounded-lg font-medium transition-all duration-200 backdrop-blur-sm ${
                     shouldGlow
                       ? "bg-gradient-to-r from-green-600/40 to-green-500/40 border-green-400 text-white shadow-[0_0_30px_rgba(34,197,94,0.6)] animate-pulse"
                       : isSelected
@@ -358,7 +358,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
 
           {learningMode && selected !== null && (
             <div
-              className={`mb-8 p-4 rounded-lg border backdrop-blur-sm ${
+              className={`mb-8 p-4 max-sm:py-1 max-sm:mb-0 text-center rounded-lg border backdrop-blur-sm ${
                 selected === current.correctIndex
                   ? "bg-green-500/10 border-green-500/40"
                   : "bg-red-500/10 border-red-500/40"
@@ -369,25 +369,24 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
               ) : (
                 <p className="text-red-400 font-medium mb-2">❌ Incorrect! The correct answer is highlighted above.</p>
               )}
-              <p className="text-sm text-gray-300">{current.explanation}</p>
             </div>
           )}
         </div>
       </div>
 
       {/* Footer */}
-      <div className="backdrop-blur-lg bg-black/30 border-t border-purple-800/40 px-4 py-4">
+      <div className="backdrop-blur-lg bg-black/30 border-t border-purple-800/40 px-4 py-4 max-sm:py-2">
         <div className="flex justify-between items-center gap-4 max-w-6xl mx-auto">
           <button
             onClick={handlePrevious}
             disabled={index === 0}
-            className={`px-6 py-2 rounded-full font-semibold transition-all duration-200 border ${
+            className={`px-6 max-sm:px-3 py-2 rounded-full font-semibold transition-all duration-200 border ${
               index === 0
                 ? "bg-black/40 text-gray-500 cursor-not-allowed border-gray-700/40"
                 : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.6)]"
             }`}
           >
-            ← Previous
+            ← 
           </button>
 
           <span className="text-sm font-medium text-purple-300">
@@ -398,7 +397,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
             <button
               onClick={handleSubmit}
               disabled={selected === null || answeredQuestions[index] !== undefined}
-              className={`px-6 py-2 rounded-full font-semibold transition-all duration-200 border ${
+              className={`px-6 max-sm:px-3 py-2 rounded-full font-semibold transition-all duration-200 border ${
                 selected === null || answeredQuestions[index] !== undefined
                   ? "bg-black/40 text-gray-500 cursor-not-allowed border-gray-700/40"
                   : "bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white border-green-500/40 shadow-[0_0_15px_rgba(34,197,94,0.4)] hover:shadow-[0_0_25px_rgba(34,197,94,0.6)]"
@@ -410,13 +409,13 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
             <button
               onClick={handleNext}
               disabled={index === questionSet.length - 1}
-              className={`px-6 py-2 rounded-full font-semibold transition-all duration-200 border ${
+              className={`px-6 max-sm:px-3 py-2 rounded-full font-semibold transition-all duration-200 border ${
                 index === questionSet.length - 1
                   ? "bg-black/40 text-gray-500 cursor-not-allowed border-gray-700/40"
                   : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.6)]"
               }`}
             >
-              Next →
+              →
             </button>
           </div>
         </div>
