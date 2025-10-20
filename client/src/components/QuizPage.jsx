@@ -257,7 +257,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
       className="min-h-screen flex flex-col"
     >
       {/* Header */}
-      <div className="backdrop-blur-lg bg-black/30 border-b border-purple-800/40 px-4 py-4 max-sm:py-2">
+      <div className="backdrop-blur-lg bg-black/30 border-b border-purple-800/40 px-4 py-2 max-sm:py-2">
         <div className="flex justify-between items-center max-w-6xl mx-auto">
           <h1 className="text-lg font-bold text-white">
             Quiz -{" "}
@@ -284,7 +284,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
         </div>
       </div>
 
-      <div className="backdrop-blur-lg bg-black/20 border-b border-purple-800/40 px-12 py-4 max-sm:py-2 overflow-x-auto scroll-hide">
+      <div className="backdrop-blur-lg bg-black/20 border-b border-purple-800/40 px-12 py-2 max-sm:py-2 overflow-x-auto scroll-hide">
         <div ref={sliderRef} className="flex gap-3 min-w-min max-w-6xl mx-auto px-4 max-sm:px-2 items-center justify-center">
           {questionSet.map((_, qIndex) => {
             const isAnswered = answeredQuestions[qIndex] !== undefined
@@ -302,7 +302,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
                 key={qIndex}
                 data-question={qIndex}
                 onClick={() => handleJumpToQuestion(qIndex)}
-                className={`w-12 h-12 max-sm:h-8 max-sm:w-8 rounded-full font-semibold text-sm transition-all duration-200 flex items-center justify-center border flex-shrink-0 ${
+                className={`w-10 h-10 max-sm:h-8 max-sm:w-8 rounded-full font-semibold text-sm transition-all duration-200 flex items-center justify-center border flex-shrink-0 ${
                   qIndex === index
                     ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white border-blue-400 ring-2 ring-blue-400/50 scale-110 shadow-[0_0_15px_rgba(37,99,235,0.6)]"
                     : `${bgColor} hover:border-purple-600/60 hover:bg-black/60`
@@ -319,12 +319,12 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
       <div className="flex-1 overflow-y-auto">
         <div className="p-6 max-w-3xl mx-auto w-full">
           <div className="mb-8">
-            <h2 className="text-2xl max-sm:text-xl font-bold mb-6 max-sm:mb-3 text-white">
+            <h2 className="text-2xl max-sm:text-xl font-bold mb-4 max-sm:mb-3 text-white">
               Q{index + 1}. {current.question}
             </h2>
           </div>
 
-          <div className="space-y-4 max-sm:space-y-2 mb-8 max-sm:mb-4">
+          <div className="space-y-4 max-sm:space-y-2 mb-4 max-sm:mb-4">
             {current.options.map((opt, i) => {
               const isSelected = selected === i
               const isCorrect = i === current.correctIndex

@@ -1,112 +1,112 @@
 [
   {
     "id": 1,
-    "question": "Which of the following is true regarding learning in psychology?",
+    "question": "Which of the following is true?",
     "options": [
-      "Learning has not been an important topic in psychology",
-      "Learning involves no change in the organism",
-      "Learning focuses on how humans speak",
-      "Learning can be defined in many ways"
+      "Human memory involves the ability to only preserve information",
+      "Human memory involves the ability to only recover information",
+      "Human memory involves the ability to neither preserve not recover information",
+      "Human memory involves the ability to both preserve and recover information"
     ],
     "correctIndex": 3
   },
   {
     "id": 2,
-    "question": "Learning is seen as an effect attributed to an element in",
+    "question": "__________ refers to connections between the nerve cells",
     "options": [
-      "blood",
-      "environment",
-      "hormones",
-      "none of the above"
+      "Storage",
+      "Synapses",
+      "Neuron",
+      "Blood"
     ],
     "correctIndex": 1
   },
   {
     "id": 3,
-    "question": "Non-associative learning refers to __________ in the intensity of a response as the result of the repeated presentation of a stimulus.",
+    "question": "In order to create a new memory, information must be changed into",
     "options": [
-      "a decrease",
-      "an increase",
-      "no change",
-      "none of the above"
+      "a usable form",
+      "a long form",
+      "a short form",
+      "a visual form"
     ],
     "correctIndex": 0
   },
   {
     "id": 4,
-    "question": "Which of the following is a type of learning style?",
+    "question": "The memory __________ process allows us to bring stored memories into conscious awareness.",
     "options": [
-      "visual",
-      "auditory",
-      "kinesthetic",
-      "all of the above"
-    ],
-    "correctIndex": 3
-  },
-  {
-    "id": 5,
-    "question": "'Psychology as the Behaviorist Views It' is the famous work of",
-    "options": [
-      "Sigmund Freud",
-      "John Watson",
-      "Albert Bandura",
-      "Ivan Pavlov"
+      "storage",
+      "retrieval",
+      "encoding",
+      "forgetting"
     ],
     "correctIndex": 1
   },
   {
-    "id": 6,
-    "question": "The state of conscious incompetence may be valuable __________ of a learning experience.",
+    "id": 5,
+    "question": "Which of the following is not a major domain of cognition?",
     "options": [
-      "at the start",
-      "at the end",
-      "in the middle",
-      "throughout the process"
+      "Judgment",
+      "Attention",
+      "Aggression",
+      "Intelligence"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 6,
+    "question": "Which of the following is not an assumption of the information processing view?",
+    "options": [
+      "Information is processed in steps or stages",
+      "There are limits on how much information can be processed",
+      "The human information processing system is interactive",
+      "Information processing is analogous to computer processing"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 7,
+    "question": "__________ refers to rote rehearsal of repetition",
+    "options": [
+      "elaborative rehearsal",
+      "maintenance rehearsal",
+      "meaningful rehearsal",
+      "none of the above"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 8,
+    "question": "__________ presentations can enhance working memory capacity",
+    "options": [
+      "multimodal",
+      "unimodal",
+      "one by one",
+      "antimodal"
     ],
     "correctIndex": 0
   },
   {
-    "id": 7,
-    "question": "Adding to existing student knowledge is known as",
-    "options": [
-      "conceptual change",
-      "conceptual pattern",
-      "conceptual exploration",
-      "conceptual growth"
-    ],
-    "correctIndex": 3
-  },
-  {
-    "id": 8,
-    "question": "Deliberate practice involves the following, except",
-    "options": [
-      "attention",
-      "rehearsal",
-      "repetition",
-      "forgetting"
-    ],
-    "correctIndex": 3
-  },
-  {
     "id": 9,
-    "question": "Students persist in the face of challenging tasks and process information more deeply when they adopt __________ goals.",
+    "question": "Episodic and semantic memories are categorized under __________ memory",
     "options": [
-      "performance",
-      "insignificant",
-      "mastery",
-      "repetitive"
+      "procedural",
+      "structural",
+      "phonemic",
+      "declarative"
     ],
-    "correctIndex": 2
+    "correctIndex": 3
   },
   {
     "id": 10,
-    "question": "__________ refers to a decrease in response rate while __________ refers to an increase in response rate.",
+    "question": "According to the neural network model, memory capacity depends on",
     "options": [
-      "sensitization, habituation.",
-      "meaningful learning, association",
-      "habituation, sensitization",
-      "association, meaningful learning"
+      "complexity of the synapses",
+      "sparseness of representations",
+      "spatial and temporal correlations between memories",
+      "all of the above"
     ],
-    "correctIndex": 2
+    "correctIndex": 3
   }
 ]

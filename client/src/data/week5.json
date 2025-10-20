@@ -1,112 +1,112 @@
 [
   {
     "id": 1,
-    "question": "Which of the following is true regarding learning in psychology?",
+    "question": "Motivation is seen as a __________ that drives and directs human behavior.",
     "options": [
-      "Learning has not been an important topic in psychology",
-      "Learning involves no change in the organism",
-      "Learning focuses on how humans speak",
-      "Learning can be defined in many ways"
+      "hormonal impulse",
+      "mental impulse",
+      "attention deficit",
+      "judgment delay"
     ],
-    "correctIndex": 3
+    "correctIndex": 1
   },
   {
     "id": 2,
-    "question": "Learning is seen as an effect attributed to an element in",
+    "question": "Which of the following is false regarding motivation?",
     "options": [
-      "blood",
-      "environment",
-      "hormones",
-      "none of the above"
+      "Motivation is an internal process",
+      "Motivation can be directly observed",
+      "Motivation activates people's actions",
+      "None of the above"
     ],
     "correctIndex": 1
   },
   {
     "id": 3,
-    "question": "Non-associative learning refers to __________ in the intensity of a response as the result of the repeated presentation of a stimulus.",
+    "question": "Which of the following does not come under intrinsic motivation?",
     "options": [
-      "a decrease",
-      "an increase",
-      "no change",
-      "none of the above"
-    ],
-    "correctIndex": 0
-  },
-  {
-    "id": 4,
-    "question": "Which of the following is a type of learning style?",
-    "options": [
-      "visual",
-      "auditory",
-      "kinesthetic",
-      "all of the above"
-    ],
-    "correctIndex": 3
-  },
-  {
-    "id": 5,
-    "question": "'Psychology as the Behaviorist Views It' is the famous work of",
-    "options": [
-      "Sigmund Freud",
-      "John Watson",
-      "Albert Bandura",
-      "Ivan Pavlov"
+      "interests",
+      "social pressure",
+      "curiosity",
+      "self-satisfaction"
     ],
     "correctIndex": 1
   },
   {
-    "id": 6,
-    "question": "The state of conscious incompetence may be valuable __________ of a learning experience.",
+    "id": 4,
+    "question": "Doing something/behaving well because one feels pressure from within is called",
     "options": [
-      "at the start",
-      "at the end",
-      "in the middle",
-      "throughout the process"
+      "introjected regulation",
+      "amotivation",
+      "identified motivation",
+      "None of the given"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 5,
+    "question": "Which of the following is not a biological need/drive?",
+    "options": [
+      "love",
+      "food",
+      "water",
+      "oxygen"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "__________ theory suggests that people are motivated to take action in order to receive a reward.",
+    "options": [
+      "incentive",
+      "biological",
+      "arousal",
+      "goal setting"
     ],
     "correctIndex": 0
   },
   {
     "id": 7,
-    "question": "Adding to existing student knowledge is known as",
+    "question": "The Arousal Theory of Motivation was first proposed by",
     "options": [
-      "conceptual change",
-      "conceptual pattern",
-      "conceptual exploration",
-      "conceptual growth"
+      "Hall",
+      "Watson",
+      "Bandura",
+      "Murray"
     ],
     "correctIndex": 3
   },
   {
     "id": 8,
-    "question": "Deliberate practice involves the following, except",
+    "question": "__________ theory is based on the assumption that our behavior is based on making a conscious choice from a set of possible alternative behaviors.",
     "options": [
-      "attention",
-      "rehearsal",
-      "repetition",
-      "forgetting"
+      "arousal",
+      "expectancy",
+      "drive",
+      "goal setting"
     ],
-    "correctIndex": 3
+    "correctIndex": 1
   },
   {
     "id": 9,
-    "question": "Students persist in the face of challenging tasks and process information more deeply when they adopt __________ goals.",
+    "question": "Which of the following is not an attribute of effective goal setting?",
     "options": [
-      "performance",
-      "insignificant",
-      "mastery",
-      "repetitive"
+      "unrealistic goals",
+      "specific goals",
+      "time based goals",
+      "assignable goals"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": 10,
-    "question": "__________ refers to a decrease in response rate while __________ refers to an increase in response rate.",
+    "question": "Maslow's hierarchy of needs consists of __________ tiers.",
     "options": [
-      "sensitization, habituation.",
-      "meaningful learning, association",
-      "habituation, sensitization",
-      "association, meaningful learning"
+      "four",
+      "three",
+      "six",
+      "five"
     ],
-    "correctIndex": 2
+    "correctIndex": 3
   }
 ]

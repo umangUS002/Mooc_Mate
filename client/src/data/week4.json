@@ -1,112 +1,113 @@
 [
   {
     "id": 1,
-    "question": "Which of the following is true regarding learning in psychology?",
+    "question": "Creative thinking is the ability to generate __________ ideas.",
     "options": [
-      "Learning has not been an important topic in psychology",
-      "Learning involves no change in the organism",
-      "Learning focuses on how humans speak",
-      "Learning can be defined in many ways"
-    ],
-    "correctIndex": 3
-  },
-  {
-    "id": 2,
-    "question": "Learning is seen as an effect attributed to an element in",
-    "options": [
-      "blood",
-      "environment",
-      "hormones",
-      "none of the above"
-    ],
-    "correctIndex": 1
-  },
-  {
-    "id": 3,
-    "question": "Non-associative learning refers to __________ in the intensity of a response as the result of the repeated presentation of a stimulus.",
-    "options": [
-      "a decrease",
-      "an increase",
-      "no change",
-      "none of the above"
-    ],
-    "correctIndex": 0
-  },
-  {
-    "id": 4,
-    "question": "Which of the following is a type of learning style?",
-    "options": [
-      "visual",
-      "auditory",
-      "kinesthetic",
+      "innovative",
+      "unconventional",
+      "useful",
       "all of the above"
     ],
     "correctIndex": 3
   },
   {
-    "id": 5,
-    "question": "'Psychology as the Behaviorist Views It' is the famous work of",
+    "id": 2,
+    "question": "__________ are representative items within each concept.",
     "options": [
-      "Sigmund Freud",
-      "John Watson",
-      "Albert Bandura",
-      "Ivan Pavlov"
+      "Constructs",
+      "Symbols",
+      "Prototypes",
+      "Categories"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 3,
+    "question": "A mental representation can take the form of a",
+    "options": [
+      "word",
+      "image",
+      "sound",
+      "all of the given"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 4,
+    "question": "Which of the following is true?",
+    "options": [
+      "Thinking is a lower mental process",
+      "Thinking is a sub-vocal talking",
+      "Thinking is unrelated to problem solving",
+      "We can only think in numbers or words"
     ],
     "correctIndex": 1
   },
   {
-    "id": 6,
-    "question": "The state of conscious incompetence may be valuable __________ of a learning experience.",
+    "id": 5,
+    "question": "Cognitive architecture is a theory about the __________ structures that create a mind in natural or artificial systems.",
     "options": [
-      "at the start",
-      "at the end",
-      "in the middle",
-      "throughout the process"
+      "structures",
+      "facts",
+      "images",
+      "sounds"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "Bloom's Taxonomy is a system of hierarchical models (arranged in a hierarchical rank,) used to categorize __________ into varying levels of complexity.",
+    "options": [
+      "learning objectives",
+      "attention goals",
+      "prototypes",
+      "none of the above"
     ],
     "correctIndex": 0
   },
   {
     "id": 7,
-    "question": "Adding to existing student knowledge is known as",
+    "question": "__________ knowledge refers to knowledge of terminology and specific details.",
     "options": [
-      "conceptual change",
-      "conceptual pattern",
-      "conceptual exploration",
-      "conceptual growth"
+      "Metacognitive",
+      "Conceptual",
+      "Kinesthetic",
+      "Factual"
     ],
     "correctIndex": 3
   },
   {
     "id": 8,
-    "question": "Deliberate practice involves the following, except",
+    "question": "Choosing to skim subheadings of unimportant information to get to the information we need as a metacognitive skill is called",
     "options": [
-      "attention",
-      "rehearsal",
-      "repetition",
-      "forgetting"
+      "Skimming",
+      "Rehearsing",
+      "Self-monitoring",
+      "Modifying"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": 9,
-    "question": "Students persist in the face of challenging tasks and process information more deeply when they adopt __________ goals.",
+    "question": "__________ refers to the ability to regulate your thoughts and set aside any personal biases to come to the best conclusion.",
     "options": [
-      "performance",
-      "insignificant",
-      "mastery",
-      "repetitive"
+      "Self-regulation",
+      "Openmindedness",
+      "Observation",
+      "Interpretation",
+      "elaboration"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": 10,
-    "question": "__________ refers to a decrease in response rate while __________ refers to an increase in response rate.",
+    "question": "__________ method of solving problems refers to a rule that guarantees the solution to a problem",
     "options": [
-      "sensitization, habituation.",
-      "meaningful learning, association",
-      "habituation, sensitization",
-      "association, meaningful learning"
+      "imagination.",
+      "trial and error",
+      "analogy",
+      "algorithm"
     ],
-    "correctIndex": 2
+    "correctIndex": 3
   }
 ]
