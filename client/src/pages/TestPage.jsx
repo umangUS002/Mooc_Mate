@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import week0 from "../data/week0.json";
 import week1 from "../data/week1.json";
 import week2 from "../data/week2.json";
 import week3 from "../data/week3.json";
@@ -32,6 +33,7 @@ function TestPage() {
     }
 
     const weekData = {
+      0: week0,
       1: week1,
       2: week2,
       3: week3,

@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "question": "What is Psychology?",
+    "options": [
+      "A Science subject",
+      "Its objective perception",
+      "An art of living",
+      "A thought process",
+      "A study of cognitive processes & behavior"
+    ],
+    "correctIndex": 4
+  },
+  {
+    "id": 2,
+    "question": "A broad field of study that explores a variety of questions about thoughts, feelings and actions is ________?",
+    "options": [
+      "Society",
+      "Globalization",
+      "Psychology",
+      "Social Science",
+      "Human Development"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 3,
+    "question": "A systematic assessment that provides information on political views, consumer buying habits and many other topics is called _________?",
+    "options": [
+      "Standardized test",
+      "Projects",
+      "Experiments",
+      "Survey",
+      "Psychological tests"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 4,
+    "question": "The word Psyche means __________?",
+    "options": [
+      "Body or physique",
+      "Mind or soul",
+      "Science & spirituality",
+      "Mental health",
+      "Neuropsychology"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 5,
+    "question": "Who established psychology laboratory in Germany?",
+    "options": [
+      "B.F. Skinner",
+      "J. Thorndike",
+      "Sigmund Freud",
+      "David Kolb",
+      "Wilhelm Wundt"
+    ],
+    "correctIndex": 4
+  },
+  {
+    "id": 6,
+    "question": "“To help people to function effectively and fulfill their own unique potential” is the aim of ________?",
+    "options": [
+      "Humanistic psychology",
+      "Social Psychiatry",
+      "Philosophy",
+      "Development studies",
+      "Sustainable development"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "Behaviorists use a learning process to change abnormal behavior is called __________?",
+    "options": [
+      "Rationalism",
+      "Experiential intervention",
+      "Gestalt mechanism",
+      "Hypotheses verification",
+      "Conditioning"
+    ],
+    "correctIndex": 4
+  },
+  {
+    "id": 8,
+    "question": "The study of changes in behavior during lifetime is called __________?",
+    "options": [
+      "Behaviorism",
+      "Individual difference",
+      "Developmental Psychology",
+      "Maturational theory",
+      "Genetics or Heredity"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 9,
+    "question": "The study of differences and similarities in the behavior of animals of different species is called __________?",
+    "options": [
+      "Sociology",
+      "Social work",
+      "Rehabilitation studies",
+      "Comparative Psychology",
+      "Cultural Psychology"
+    ],
+    "correctIndex": 3
+  }
+]

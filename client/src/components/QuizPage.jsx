@@ -260,12 +260,7 @@ export default function QuizPage({ questions, learningMode, onRestart, selectedW
       <div className="backdrop-blur-lg bg-black/30 border-b border-purple-800/40 px-4 py-2 max-sm:py-2">
         <div className="flex justify-between items-center max-w-6xl mx-auto">
           <h1 className="text-lg font-bold text-white">
-            Quiz -{" "}
-            {selectedWeeks?.length === 12
-              ? "All Weeks"
-              : selectedWeeks?.length > 1
-                ? `Weeks ${selectedWeeks.join(", ")}`
-                : `Week ${selectedWeeks?.[0] || "1"}`}
+            Psychology of Learning - Quiz
           </h1>
 
           <div className="flex items-center gap-4">

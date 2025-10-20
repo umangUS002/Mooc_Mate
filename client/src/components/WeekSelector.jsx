@@ -11,7 +11,7 @@ export default function WeekSelector({ selectedWeeks, setSelectedWeeks }) {
   };
 
   const handleFullTest = () => {
-    setSelectedWeeks([...Array(12)].map((_, i) => i + 1));
+    setSelectedWeeks([...Array(13)].map((_, i) => i ));
   };
 
   return (
@@ -21,8 +21,8 @@ export default function WeekSelector({ selectedWeeks, setSelectedWeeks }) {
       </h2>
 
       <div className="grid grid-cols-3 gap-4 max-sm:gap-2 lg:grid-cols-3">
-        {[...Array(12)].map((_, i) => {
-          const week = i + 1;
+        {[...Array(13)].map((_, i) => {
+          const week = i;
           const isSelected = selectedWeeks.includes(week);
 
           return (
